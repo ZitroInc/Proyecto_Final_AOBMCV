@@ -1,5 +1,6 @@
 from django import forms
-from .models import Post
+from .models import Post, Usuario
+
 
 class PostForm(forms.ModelForm):
     class Meta:

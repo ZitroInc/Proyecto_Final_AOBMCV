@@ -25,10 +25,10 @@ def buscar_posteo(request):
 class PosteoLista(ListView):
     model = Posteo_Lista
 
-def mostrar_posteos(request):
+# def mostrar_posteos(request):
 
 
-# @login_required()
+#""" @login_required()"""
 # def crear_posteo_form(request):
 #     if request.method == "POST":
 #         post_formulario = PostForm(request.POST)

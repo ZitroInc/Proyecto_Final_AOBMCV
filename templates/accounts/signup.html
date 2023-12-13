@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
+<head>
+    <title>Regístrate</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Crear Nueva Cuenta</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear Cuenta</button>
+    </form>
+    {% endblock %}
+
+</body>
+</html>
+{% endblock %}
+
+<!--REVISAR-->
