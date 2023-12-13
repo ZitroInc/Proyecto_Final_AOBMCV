@@ -10,3 +10,9 @@ class Post(models.Model):
     def __str__(self):
         return self.nombre_local
 
+
+class Usuario(models.Model):
+    nickname = models.CharField(max_length=30)
+    email = models.EmailField()
+
+
