@@ -7,21 +7,6 @@ class PostForm(forms.ModelForm):
         fields = ['nombre_local', 'comentario', 'imagen']
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class BuscarForm(forms.Form):
     nombre_local = forms.CharField(max_length=100)
     plato = forms.CharField(max_length=50)
