@@ -12,6 +12,11 @@ class Post(models.Model):
         return self.nombre_local
 
 
+
+
+
+
+
 class Posteo_Lista(models.Model):
     nombre_local = models.CharField()
     comentario = models.TextField()
