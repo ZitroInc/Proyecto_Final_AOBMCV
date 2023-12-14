@@ -14,7 +14,7 @@ def index(request):
     contexto = {
         'posts': posts
     }
-    return render(request, '', contexto)
+    return render(request, 'monchis/index.html', contexto)
 
 def crear_posteo(request):
     if request.method == 'POST':
