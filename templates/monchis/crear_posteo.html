@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+
+{% block cambio %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Nuevo Posteo</title>
 </head>
 <body>
-
-  <h1>Crear Nuevo Posteo</h1>
-
-  <form method="post" enctype="multipart/form-data" action="{% url 'crear_posteo' %}">
-    {% csrf_token %}
-
-    <label for="id_nombre_local">Nombre del Local:</label>
-    <input type="text" name="nombre_local" required id="id_nombre_local">
-
-    <label for="id_comentario">Comentario:</label>
-    <textarea name="comentario" required id="id_comentario"></textarea>
-
-    <label for="id_imagen">Imagen:</label>
-    <input type="file" name="imagen" required id="id_imagen">
-
-    <button type="submit">Publicar</button>
-  </form>
-
-  <a href="{% url 'base' %}">Volver al inicio</a>
-
+    {% block content %}
+    <h1>Crear Nuevo Posteo</h1>
+    <form method="post" enctype="multipart/form-data" action="{% url 'crear_posteo' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publicar</button>
+    </form>
+    {% endblock %}
+    <a href="{% url 'base' %}">Volver al inicio</a>
 </body>
 </html>
+{% endblock %}
