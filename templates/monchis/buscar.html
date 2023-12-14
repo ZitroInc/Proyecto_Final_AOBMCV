@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
+<head>
+    <title>Búsqueda de Monchis - Buscar</title>
+</head>
+
+
+<body>
+    <h2>Búsqueda:</h2>
+    <form method="POST" action="{% url 'buscar' %}">
+        {% csrf_token %}
+        {{ Post_form.as_p }}
+        <button type="submit">Buscar</button>
+    </form>
+
+
+    {% if resultados %}
+        <h3>Resultados</h3>
+        <ul>
+
+            {% for Post in resultados %}
+                <li>
+                    {{ Post.nombre_local }} - {{ Post.comentario }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+
+</body>
+</html>
+{% endblock %}
