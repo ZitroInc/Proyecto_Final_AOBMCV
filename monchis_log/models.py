@@ -15,6 +15,6 @@ class Usuario(models.Model):
     email = models.EmailField()
 
 class Posteo_Lista(models.Model):
-    nombre_local = models.CharField()
-    comentario = models.TextField()
-    imagen = models.ImageField()
+    nombre_local = models.CharField(max_length=100)
+    comentario = models.TextField(max_length=1000)
+    imagen = models.ImageField(upload_to='uploads/')
