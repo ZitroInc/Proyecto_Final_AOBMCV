@@ -34,7 +34,7 @@ def buscar_posteo(request):
         posteo_form = BuscarForm(request.POST)
 
         if posteo_form.is_valid():
-            busqueda = posteo_form.cleaned_data['busqueda']
+            busqueda = posteo_form.cleaned_data['buscar']
             resultados = Post.objects.filter(nombre_local__icontains=busqueda)
 
     contexto = {

@@ -8,9 +8,9 @@
 
 <body>
     <h2>Búsqueda:</h2>
-    <form method="POST" action="{% url 'buscar' %}">
+    <form method="POST" action="">
         {% csrf_token %}
-        {{ Post_form.as_p }}
+        {{ posteo_form.as_p }}
         <button type="submit">Buscar</button>
     </form>
 
@@ -19,9 +19,9 @@
         <h3>Resultados</h3>
         <ul>
 
-            {% for Post in resultados %}
+            {% for post in resultados %}
                 <li>
-                    {{ Post.nombre_local }} - {{ Post.comentario }}
+                    {{ post.nombre_local }} - {{ post.comentario }}
                 </li>
             {% endfor %}
         </ul>

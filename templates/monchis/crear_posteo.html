@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+<!--{% extends 'base.html' %}-->
 
 {% block cambio %}
 <html>
@@ -6,15 +6,14 @@
     <title>Crear Nuevo Posteo</title>
 </head>
 <body>
-    {% block content %}
+
     <h1>Crear Nuevo Posteo</h1>
-    <form method="post" enctype="multipart/form-data" action="{% url 'crear_posteo' %}">
+    <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Publicar</button>
+        <input type="submit" value="Publicar">
     </form>
-    {% endblock %}
-    <a href="{% url 'base' %}">Volver al inicio</a>
+
 </body>
 </html>
 {% endblock %}

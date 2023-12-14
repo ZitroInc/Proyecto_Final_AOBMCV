@@ -7,11 +7,11 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['nombre_local', 'comentario', 'imagen']
 
-
+"""REVISAR"""
 class BuscarForm(forms.Form):
     buscar = forms.CharField(label='Buscar')
 
-class UsuarioForm(forms.ModelForm):
-    class Meta:
-        model = Usuario
-        fields = ['usuario']
+# class UsuarioForm(forms.ModelForm):
+#     class Meta:
+#         model = Usuario
+#         fields = ['user']
