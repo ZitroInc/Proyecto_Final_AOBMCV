@@ -4,9 +4,15 @@ from django.views.generic import ListView
 from .models import Post, Posteo_Lista
 from .forms import PostForm
 
+# def index(request):
+#     posts = Post.objects.all()
+#     return render(request, 'mochis/index.html', {'posts': posts})
 def index(request):
     posts = Post.objects.all()
-    return render(request, 'mochis/index.html', {'posts': posts})
+    contexto = {
+        'posts': posts
+    }
+    return render(request, '', contexto)
 
 def crear_posteo(request):
     if request.method == 'POST':
@@ -16,7 +22,7 @@ def crear_posteo(request):
             return redirect('index')
     else:
         form = PostForm()
-    return render(request, 'mochis/crear_posteo.html', {'form': form})
+    return render(request, 'monchis/crear_posteo.html', {'form': form})
 
 def buscar_posteo(request):
     nombre_local = request.GET["nombre_local"]
