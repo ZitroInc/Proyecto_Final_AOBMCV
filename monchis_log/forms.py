@@ -9,8 +9,7 @@ class PostForm(forms.ModelForm):
 
 
 class BuscarForm(forms.Form):
-    nombre_local = forms.CharField(max_length=100)
-    plato = forms.CharField(max_length=50)
+    buscar = forms.CharField(label='Buscar')
 
 class UsuarioForm(forms.ModelForm):
     class Meta:

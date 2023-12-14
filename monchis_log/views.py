@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
 from .models import Post, Posteo_Lista
-from .forms import PostForm
+from .forms import PostForm, BuscarForm
+
 
 # def index(request):
 #     posts = Post.objects.all()
@@ -25,8 +26,22 @@ def crear_posteo(request):
     return render(request, 'monchis/crear_posteo.html', {'form': form})
 
 def buscar_posteo(request):
-    nombre_local = request.GET["nombre_local"]
+    posteo_form = BuscarForm()
+    resultados = []
 
+    if request.method == 'POST':
+        posteo_form = BuscarForm(request.POST)
+
+        if posteo_form.is_valid():
+            busqueda = posteo_form.cleaned_data['busqueda']
+            resultados = Post.objects.filter(nombre_local__icontains=busqueda)
+
+    contexto = {
+        'posteo_form': posteo_form,
+        'resultados': resultados
+    }
+
+    return render(request, 'monchis/buscar.html', contexto)
 
 class PosteoLista(ListView):
     model = Posteo_Lista
