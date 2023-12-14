@@ -76,13 +76,13 @@ class PostDetalle(LoginRequiredMixin, DetailView):
 
 class PostCreacion(CreateView):
     model = Post
-    sucess_url = xxxxxxxxxxx
+    sucess_url = "monchis/posteos/listar"
     template_name = "monchis/crear_posteo.html"
     fields = ["nombre_local", "comentario"]
 
 class PostActualizacion(UpdateView):
     model = Post
-    success_url = xxxxxxxxxxxxxxx
+    success_url = "monchis/posteos/listar"
     template_name = "monchis/crear_posteo.html"
     fields = ["nombre_local", "comentario"]
 
