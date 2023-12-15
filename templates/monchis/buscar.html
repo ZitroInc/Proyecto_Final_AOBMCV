@@ -1,4 +1,3 @@
-<!--Editado con el profe-->
 {% extends 'base.html' %}
 {% block cambio %}
 <html>
@@ -9,9 +8,9 @@
 
 <body>
     <h2>Búsqueda:</h2>
-    <form method="POST" action="">
+    <form method="POST" action="{% url 'Buscar' %}">
         {% csrf_token %}
-        {{ posteo_form.as_p }}
+        {{ busqueda_form.as_p }}
         <button type="submit">Buscar</button>
     </form>
 
@@ -24,7 +23,6 @@
                 <li>
                     <a href="/detalles/{{post.id}}">{{ post.titulo }} - {{ post.subtitulo }}</a>
                 </li>
-
             {% endfor %}
         </ul>
     {% else %}

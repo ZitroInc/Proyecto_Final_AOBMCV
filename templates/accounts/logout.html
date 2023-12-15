@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
-
 {% block cambio %}
-  <h1>Has cerrado sesión, vuelve pronto.</h1>
+<html>
+<head>
+    <title>Sesión cerrada.</title>
+    <script>
+        function redirigirInicio() {
+            window.location.href = "{% url 'Inicio' %}";
+        }
+
+        function mostrarMensaje() {
+            document.getElementById("mensaje").style.display = "block";
+            setTimeout(redirigirInicio, 3000);  // Redirige después de 3 segundos (3000 milisegundos)
+        }
+    </script>
+</head>
+<body onload="mostrarMensaje()">
+    {% block content %}
+    <div id="mensaje" style="display: center;">
+        <h1>Has cerrado sesión, vuelve pronto.</h1>
+    </div>
+    {% endblock %}
+</body>
+</html>
 {% endblock %}
+

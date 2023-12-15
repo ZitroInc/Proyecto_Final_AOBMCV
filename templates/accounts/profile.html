@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Perfil de Usuario</title>
 </head>
 <body>
+    {% block content %}
+    <h2>Perfil de Usuario</h2>
 
+    <h3>Datos del Usuario:</h3>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+
+    <h3>Actualizar Datos:</h3>
+    <form method="post" action="{% url 'Profile' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <a href="{% url 'Avatar' %}">Actualizar Avatar</a>
+
+    {% endblock %}
 </body>
 </html>
+{% endblock %}

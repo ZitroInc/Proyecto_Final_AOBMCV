@@ -1,25 +1,33 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import LogoutView
+from django.urls import reverse_lazy
 
 from accounts.forms import UserRegisterForm, UserUpdateForm, AvatarUpdateForm
 from accounts.models import Avatar
+
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('Inicio')
 
 
 def signup_request(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
-
         if form.is_valid():
-            form.save()
+            user = form.save()
 
-            return redirect("profile")
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+
+            return redirect("Profile")
 
     form = UserRegisterForm()
     contexto = {"form": form}
     return render(request, "accounts/signup.html", contexto)
-
 
 @login_required
 def edit_user_request(request):
@@ -30,11 +38,11 @@ def edit_user_request(request):
             data = form.cleaned_data
             user.email = data["email"]
             user.save()
-            return redirect("Inicio")
+            return redirect("Avatar")
 
     form = UserUpdateForm(initial={"email": user.email})
     contexto = {"form": form}
-    return render(request, "accounts/signup.html", contexto)
+    return render(request, "accounts/profile.html", contexto)
 
 
 @login_required
@@ -74,7 +82,7 @@ def login_request(request):
             if user:
                 login(request, user)
 
-        return redirect("inicio")
+        return redirect("Inicio")
 
     form = AuthenticationForm()
     contexto = {"form": form}

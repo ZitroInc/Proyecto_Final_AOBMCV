@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
+<head>
+    <title>Lista de Monchis</title>
+</head>
+
+
+<body>
+    <h2>Lista de Monchis:</h2>
+    <ul>
+        {% for post in posteos %}
+            <li>
+                    <a href="/detalles/{{post.id}}">{{ post.titulo }} - {{ post.subtitulo }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}
