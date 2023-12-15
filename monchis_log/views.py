@@ -12,9 +12,6 @@ from .models import Post, Posteo_Lista
 from .forms import PostForm, BuscarForm
 
 
-# def index(request):
-#     posts = Post.objects.all()
-#     return render(request, 'mochis/index.html', {'posts': posts})
 def index(request):
     posts = Post.objects.all()
     contexto = {"posts": posts}
@@ -51,26 +48,6 @@ def mostrar_posteo(request):
 
 class PosteoLista(ListView):
     model = Posteo_Lista
-
-
-# def mostrar_posteos(request):
-
-
-""" @login_required()"""
-# def crear_posteo_form(request):
-#     if request.method == "POST":
-#         post_formulario = PostForm(request.POST, request.FILES)
-#         if post_formulario.is_valid():
-#             informacion = post_formulario.cleaned_data
-#             nuevo_posteo = Post(**informacion)
-#             nuevo_posteo.save()
-#             return redirect("monchis/posteos/")
-#
-#     post_formulario = PostForm()
-#     contexto = {
-#         "form": post_formulario
-#     }
-#     return render(request, "monchis/crear_posteo.html", contexto)
 
 
 class PostList(LoginRequiredMixin, ListView):
