@@ -2,9 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Post(models.Model):
-    nombre_local = models.CharField(max_length=100)
-    comentario = models.TextField()
-    imagen = models.ImageField(upload_to='uploads/')
+    titulo = models.CharField(max_length=100)
+    subtitulo = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    imagen = models.ImageField(upload_to='foto_post/')
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -15,6 +16,7 @@ class Usuario(models.Model):
     email = models.EmailField()
 
 class Posteo_Lista(models.Model):
-    nombre_local = models.CharField(max_length=100)
-    comentario = models.TextField(max_length=1000)
-    imagen = models.ImageField(upload_to='uploads/')
+    titulo = models.CharField(max_length=100)
+    subtitulo = models.CharField(max_length=100)
+
+# titulo =nombre local

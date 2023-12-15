@@ -1,10 +1,35 @@
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
+<head>
+    <title>Búsqueda de Monchis - Buscar</title>
+</head>
 
 
-
-<form action="/app/buscar" method="GET">
-
-        {{ form.as_p }}
-
-        <input type="submit" value="Buscar">
-
+<body>
+    <h2>Búsqueda:</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ posteo_form.as_p }}
+        <button type="submit">Buscar</button>
     </form>
+
+
+    {% if resultados %}
+        <h3>Resultados</h3>
+        <ul>
+
+            {% for post in resultados %}
+                <li>
+                    <a href="/detalles/{{post.id}}">{{ post.titulo }} - {{ post.subtitulo }}</a>
+                </li>
+
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+
+</body>
+</html>
+{% endblock %}
