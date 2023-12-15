@@ -14,7 +14,7 @@ def signup_request(request):
         if form.is_valid():
             form.save()
 
-            return redirect("Inicio")
+            return redirect("profile")
 
     form = UserRegisterForm()
     contexto = {"form": form}
