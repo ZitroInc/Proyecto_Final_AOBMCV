@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
+from django.template.context_processors import request
 from django.views.generic import (
     ListView,
     DetailView,
@@ -108,3 +109,7 @@ class PostEliminar(DeleteView):
     model = Post
     template_name = "monchis/eliminar_posteo.html"
     success_url = "monchis/posteos/listar"
+
+def about_us(request):
+    return render(request, 'monchis/about_us.html')
+

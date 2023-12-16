@@ -1,10 +1,10 @@
 from django.urls import path
 # from monchis_log.views import crear_posteo, mostrar_posteo, inicio
-from monchis_log.views import crear_posteo, inicio, posts, buscar #about_us
+from monchis_log.views import crear_posteo, inicio, posts, buscar, about_us
 
 urlpatterns = [
     path("postear/", crear_posteo, name="Postear"),
-    # path("buscar/", mostrar_posteo, name="Buscar"),
+    path("about_us/", about_us, name="about_us"),
     path("buscar/", buscar, name="Buscar"),
     path("lista_monchis/", posts, name="ListaPosteos"),
     path("", inicio, name="Inicio"),
