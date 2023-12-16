@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block cambio %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Detalles del Monchi</title>
 </head>
-<body>
 
+<body>
+    <h2>Detalles del Monchi:</h2>
+    <h3>{{ post.titulo }} - {{ post.subtitulo }}</h3>
+    <p>{{ post.descripcion }}</p>
+    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}">
+
+    <a href="{% url 'ListaPosteos' %}">Volver a la lista de Monchis</a>
 </body>
 </html>
+{% endblock %}

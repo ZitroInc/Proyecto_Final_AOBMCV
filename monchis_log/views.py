@@ -20,7 +20,7 @@ def inicio(request):
     contexto = {"posts": posts}
     return render(request, "monchis/inicio.html", contexto)
 
-
+"""REVISAR"""
 def crear_posteo(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
@@ -90,20 +90,27 @@ class PostDetalle(LoginRequiredMixin, DetailView):
     model = Post
     template_name = "monchis/posteos_detalle.html"
 #
-
+"""REVISAR"""
 class PostCreacion(CreateView):
     model = Post
     sucess_url = "/lista_monchis"
     template_name = "monchis/crear_posteo.html"
     fields = ["titulo", "subtitulo", "descripcion", "imagen"]
 
-
+"""REVISAR"""
 class PostActualizacion(UpdateView):
     model = Post
     success_url = "/lista_monchis"
     template_name = "monchis/crear_posteo.html"
-    fields = ["titulo", "subtitulo", "descripcion", "imagen"]
-
+    form_class = PostForm
+    # fields = ["titulo", "subtitulo", "descripcion", "imagen"]
+    """TEST"""
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        if 'imagen' in form.changed_data:
+            post.imagen = form.cleaned_data['imagen']
+        post.save()
+        return super().form_valid(form)
 
 class PostEliminar(DeleteView):
     model = Post
