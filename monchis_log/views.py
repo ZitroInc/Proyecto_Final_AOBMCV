@@ -31,24 +31,6 @@ def crear_posteo(request):
         form = PostForm()
     return render(request, "monchis/crear_posteo.html", {"form": form})
 
-"""# Test mezclando Búsqueda y Lista"""
-# def mostrar_posteo(request):
-#     if request.method == "POST":
-#         posteo_form = BuscarForm(request.POST)
-#
-#         if posteo_form.is_valid():
-#             busqueda = posteo_form.cleaned_data["buscar"]
-#             resultados = Post.objects.filter(titulo__icontains=busqueda)
-#
-#     else:
-#         resultados = Post.objects.all()
-#     posteo_form = BuscarForm()
-#
-#     contexto = {"posteo_form": posteo_form, "resultados": resultados}
-#
-#     return render(request, "monchis/posteos.html", contexto)
-
-"""Test separado"""
 
 def buscar(request):
     buscar_form = BuscarForm()

@@ -7,9 +7,15 @@
 
 <body>
     <h2>Detalles del Monchi:</h2>
-    <h3>{{ post.titulo }} - {{ post.subtitulo }}</h3>
+    <h3>{{ post.titulo }}</h3>
     <p>{{ post.descripcion }}</p>
-    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}">
+    <img src="{{ post.imagen.url }}" alt="{{ post.subtitulo }}">
+
+    <h4>Comentarios:</h4>
+    <ul>
+        {% for comentario in
+
+    </ul>
 
     <a href="{% url 'ListaPosteos' %}">Volver a la lista de Monchis</a>
 </body>
