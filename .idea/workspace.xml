@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03b0ac31-451a-40f7-a435-488ae9da2b4f" name="Changes" comment="A">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_Final_AOBMCV-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_Final_AOBMCV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto_Final_AOBMCV.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final_AOBMCV/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final_AOBMCV/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0002_alter_avatar_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monchis_log/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/monchis_log/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monchis_log/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/monchis_log/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monchis_log/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/monchis_log/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monchis_log/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/monchis_log/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monchis_log/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/monchis_log/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/monchis/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monchis/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/monchis/crear_posteo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monchis/crear_posteo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/monchis/eliminar_posteo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monchis/eliminar_posteo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/monchis/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monchis/inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/monchis/posteos_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monchis/posteos_detalle.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ZitroInc&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fe9bc9a4-665d-48a2-acd6-48741104177b" />
+        <option name="url" value="https://github.com/ZitroInc/Proyecto_Final_AOBMCV.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ZTGM5UPhsoKgAmhi4Kvh125V22" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Andrés Ortiz/PycharmProjects/Proyecto_Final_AOBMCV/monchis_log&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrés Ortiz\PycharmProjects\Proyecto_Final_AOBMCV\monchis_log" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrés Ortiz\PycharmProjects\Proyecto_Final_AOBMCV\media" />
+      <recent name="C:\Users\Andrés Ortiz\PycharmProjects\Proyecto_Final_AOBMCV\templates\base" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Proyecto_Final_AOBMCV" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (Proyecto_Final_AOBMCV)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="manage" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03b0ac31-451a-40f7-a435-488ae9da2b4f" name="Changes" comment="" />
+      <created>1702438604431</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702438604431</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Reinicio de proyecto">
+      <option name="closed" value="true" />
+      <created>1702440162638</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702440162638</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Agregando extras">
+      <option name="closed" value="true" />
+      <created>1702442931737</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702442931738</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Configurando Usuario y actualizando Settings">
+      <option name="closed" value="true" />
+      <created>1702445976858</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702445976858</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Configurando Usuario y actualizando Settings">
+      <option name="closed" value="true" />
+      <created>1702446628281</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702446628281</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Configurando Usuario y actualizando Settings">
+      <option name="closed" value="true" />
+      <created>1702446665737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702446665737</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Agregando HTML's y configuración de User">
+      <option name="closed" value="true" />
+      <created>1702496665491</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496665491</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Editando HTML's y Config de Plantilla base">
+      <option name="closed" value="true" />
+      <created>1702591640341</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702591640341</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Editando HTML's y Config de Plantilla base">
+      <option name="closed" value="true" />
+      <created>1702592368717</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702592368717</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modificando HTML's y Models">
+      <option name="closed" value="true" />
+      <created>1702599894582</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702599894582</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modificando HTML's y Models">
+      <option name="closed" value="true" />
+      <created>1702599906930</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702599906930</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Eliminando cosas comentadas">
+      <option name="closed" value="true" />
+      <created>1702604750292</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702604750292</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Arreglando cosas.">
+      <option name="closed" value="true" />
+      <created>1702682488946</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702682488946</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Configuración de &quot;Detalles&quot; y editando CSS">
+      <option name="closed" value="true" />
+      <created>1702691187552</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702691187552</updated>
+    </task>
+    <task id="LOCAL-00014" summary="testeando configuraciones de CSS">
+      <option name="closed" value="true" />
+      <created>1702691329720</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702691329720</updated>
+    </task>
+    <task id="LOCAL-00015" summary="testeando configuraciones de CSS">
+      <option name="closed" value="true" />
+      <created>1702691532029</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702691532029</updated>
+    </task>
+    <task id="LOCAL-00016" summary="testeando configuraciones html">
+      <option name="closed" value="true" />
+      <created>1702697408339</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702697408339</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Configurando URL Detalles y otros">
+      <option name="closed" value="true" />
+      <created>1702775368813</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702775368813</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reinicio de proyecto" />
+    <MESSAGE value="Agregando extras" />
+    <MESSAGE value="Configurando Usuario y actualizando Settings" />
+    <MESSAGE value="Agregando HTML's y configuración de User" />
+    <MESSAGE value="Editando HTML's y Config de Plantilla base" />
+    <MESSAGE value="Modificando HTML's y Models" />
+    <MESSAGE value="Eliminando cosas comentadas" />
+    <MESSAGE value="Arreglando cosas." />
+    <MESSAGE value="Configuración de &quot;Detalles&quot; y editando CSS" />
+    <MESSAGE value="testeando configuraciones de CSS" />
+    <MESSAGE value="testeando configuraciones html" />
+    <MESSAGE value="Configurando URL Detalles y otros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configurando URL Detalles y otros" />
+  </component>
+</project>
