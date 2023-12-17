@@ -13,24 +13,24 @@ class CustomLogoutView(LogoutView):
     next_page = reverse_lazy("Inicio")
 
 
-def signup_request(request):
-    if request.method == "POST":
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-
-            username = form.cleaned_data.get("username")
-            password = form.cleaned_data.get("password")
-            user = authenticate(username=username, password=password)
-            login(request, user)
-
-            return redirect("Profile")
-
-    form = UserRegisterForm()
-    contexto = {"form": form}
-    return render(request, "accounts/signup.html", contexto)
-
-
+# def signup_request(request):
+#     if request.method == "POST":
+#         form = UserRegisterForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#
+#             username = form.cleaned_data.get("username")
+#             password = form.cleaned_data.get("password")
+#             user = authenticate(username=username, password=password)
+#             login(request, user)
+#
+#             return redirect("Profile")
+#
+#     form = UserRegisterForm()
+#     contexto = {"form": form}
+#     return render(request, "accounts/signup.html", contexto)
+#
+#
 # @login_required
 # def edit_user_request(request):
 #     user = request.user
@@ -103,7 +103,7 @@ def login_request(request):
 #
 #     return render(request, 'profile.html', {'form': form})
 
-@login_required
+
 def profile(request):
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
@@ -118,6 +118,35 @@ def profile(request):
         form = UserUpdateForm(instance=request.user)
 
     return render(request, 'profile.html', {'form': form})
+#
+# @login_required
+# def edit_user_request(request):
+#     user = request.user
+#     if request.method == "POST":
+#         form = UserUpdateForm(request.POST, instance=user)
+#         if form.is_valid():
+#             form.save()
+#             return redirect("Avatar")
+#     else:
+#         form = UserUpdateForm(instance=user)
+#
+#     contexto = {"form": form}
+#     return render(request, "accounts/profile.html", contexto)
+
+def signup_request(request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+
+            user = authenticate(username=form.cleaned_data.get("username"), password=form.cleaned_data.get("password1"))
+            login(request, user)
+
+            return redirect("edit_user_request")
+
+    form = UserRegisterForm()
+    contexto = {"form": form}
+    return render(request, "accounts/signup.html", contexto)
 
 @login_required
 def edit_user_request(request):
