@@ -142,7 +142,7 @@ def signup_request(request):
             user = authenticate(username=form.cleaned_data.get("username"), password=form.cleaned_data.get("password1"))
             login(request, user)
 
-            return redirect("edit_user_request")
+            return redirect("Profile")
 
     form = UserRegisterForm()
     contexto = {"form": form}
