@@ -14,7 +14,7 @@ urlpatterns = [
     path("buscar/", buscar, name="Buscar"),
     path("lista_monchis/", posts, name="ListaPosteos"),
     path("", inicio, name="Inicio"),
-    path("detalles/<int:pk>/", PostDetalle.as_view(), name="Detalles"),
+    # path("detalles/<int:pk>/", PostDetalle.as_view(), name="Detalles"),
     path(r"^detalles/(?P<pk>\d+)$", PostDetalle.as_view(), name="Detalles"),
     # path("detalles/<int:post_id>/", AgregarComentarioView.as_view, name="AgregarComentario"),
 ]
