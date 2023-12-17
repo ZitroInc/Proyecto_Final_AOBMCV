@@ -4,12 +4,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LogoutView
 from django.urls import reverse_lazy
-
 from accounts.forms import UserRegisterForm, UserUpdateForm, AvatarUpdateForm
 from accounts.models import Avatar
 
+
 class CustomLogoutView(LogoutView):
-    next_page = reverse_lazy('Inicio')
+    next_page = reverse_lazy("Inicio")
 
 
 def signup_request(request):
@@ -18,8 +18,8 @@ def signup_request(request):
         if form.is_valid():
             user = form.save()
 
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password1')
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
             user = authenticate(username=username, password=password)
             login(request, user)
 
@@ -28,6 +28,7 @@ def signup_request(request):
     form = UserRegisterForm()
     contexto = {"form": form}
     return render(request, "accounts/signup.html", contexto)
+
 
 @login_required
 def edit_user_request(request):

@@ -11,19 +11,12 @@ class UserRegisterForm(UserCreationForm):
         fields = ("username", "email")
 
 
-# class UserUpdateForm(UserChangeForm):
-#     class Meta:
-#         model = User
-#         fields = ("username", "email")
-
-
 class UserUpdateForm(UserChangeForm):
-    avatar = forms.ImageField(required=False, label="Avatar")
 
     class Meta:
         model = User
-        fields = ("username", "email", "avatar")
-
+        fields = ("first_name", "last_name")
+"""REVISAR"""
 
 class AvatarUpdateForm(forms.ModelForm):
     class Meta:

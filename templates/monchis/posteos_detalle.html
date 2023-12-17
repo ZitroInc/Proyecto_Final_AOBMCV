@@ -7,15 +7,29 @@
 
 <body>
     <h2>Detalles del Monchi:</h2>
+
     <h3>{{ post.titulo }}</h3>
     <p>{{ post.descripcion }}</p>
-    <img src="{{ post.imagen.url }}" alt="{{ post.subtitulo }}">
+    <img src="{{ post.imagen.url }}" style="max-height: 300px;">
+    <p>{{ post.subtitulo }}</p>
 
     <h4>Comentarios:</h4>
     <ul>
-        {% for comentario in
-
+        {% for comentario in post.comentarios.all %}
+            <li>
+                {{ comentario.comment }} - {{ comentario.fecha }}
+                <br>
+                Comentado por: {{ comentario.usuario.nickname }}
+            </li>
+        {% endfor %}
     </ul>
+    <form method="POST" action="{% url 'Detalles' post.id %}">
+        {% csrf_token %}
+        {{ comentario_form.as_p }}
+        <button type="submit">Agregar Comentario.</button>
+
+    </form>
+
 
     <a href="{% url 'ListaPosteos' %}">Volver a la lista de Monchis</a>
 </body>

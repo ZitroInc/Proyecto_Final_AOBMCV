@@ -1,13 +1,12 @@
 from django import forms
 
-from .models import Post, Comentario,Usuario
+from .models import Post, Comentario, Usuario
 
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ["titulo", "subtitulo", "descripcion", "imagen"]
-        # descripcion del post
 
 
 class BuscarForm(forms.Form):
@@ -23,4 +22,4 @@ class ComentarioForm(forms.ModelForm):
 class UsuarioForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['nickname', 'email']
+        fields = ["nickname", "email"]

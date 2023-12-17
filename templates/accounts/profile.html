@@ -9,8 +9,10 @@
     <h2>Perfil de Usuario</h2>
 
     <h3>Datos del Usuario:</h3>
-    <p>Username: {{ user.username }}</p>
+    <p>Nickname: {{ user.username }}</p>
     <p>Email: {{ user.email }}</p>
+    <p>Nombre: {{ user.first_name }}</p>
+    <p>Apellido: {{ user.last_name }}</p>
 
     <h3>Actualizar Datos:</h3>
     <form method="post" action="{% url 'Profile' %}">

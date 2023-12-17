@@ -11,7 +11,7 @@
     <ul>
         {% for post in posteos %}
             <li>
-                    <a href="/detalles/{{post.id}}">{{ post.titulo }} - {{ post.subtitulo }}</a>
+                    <a href="{% url 'Detalles' post.id %}">{{ post.titulo }} - {{ post.subtitulo }}</a>
             </li>
         {% endfor %}
     </ul>
