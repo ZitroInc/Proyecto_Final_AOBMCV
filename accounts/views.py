@@ -3,6 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LogoutView
+from django.contrib import messages
 from django.urls import reverse_lazy
 from accounts.forms import UserRegisterForm, UserUpdateForm, AvatarUpdateForm
 from accounts.models import Avatar
@@ -30,20 +31,20 @@ def signup_request(request):
     return render(request, "accounts/signup.html", contexto)
 
 
-@login_required
-def edit_user_request(request):
-    user = request.user
-    if request.method == "POST":
-        form = UserUpdateForm(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-            user.email = data["email"]
-            user.save()
-            return redirect("Avatar")
-
-    form = UserUpdateForm(initial={"email": user.email})
-    contexto = {"form": form}
-    return render(request, "accounts/profile.html", contexto)
+# @login_required
+# def edit_user_request(request):
+#     user = request.user
+#     if request.method == "POST":
+#         form = UserUpdateForm(request.POST)
+#         if form.is_valid():
+#             data = form.cleaned_data
+#             user.email = data["email"]
+#             user.save()
+#             return redirect("Avatar")
+#
+#     form = UserUpdateForm(initial={"email": user.email})
+#     contexto = {"form": form}
+#     return render(request, "accounts/profile.html", contexto)
 
 
 @login_required
@@ -88,3 +89,46 @@ def login_request(request):
     form = AuthenticationForm()
     contexto = {"form": form}
     return render(request, "accounts/login.html", contexto)
+
+# @login_required
+# def profile(request):
+#     if request.method == 'POST':
+#         form = UserUpdateForm(request.POST, instance=request.user)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Tu perfil ha sido actualizado exitosamente.')
+#             return redirect('Profile')
+#     else:
+#         form = UserUpdateForm(instance=request.user)
+#
+#     return render(request, 'profile.html', {'form': form})
+
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        form = UserUpdateForm(request.POST, instance=request.user)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = request.user.username
+            user.email = request.user.email
+            user.save()
+            messages.success(request, 'Tu perfil ha sido actualizado exitosamente.')
+            return redirect('Profile')
+    else:
+        form = UserUpdateForm(instance=request.user)
+
+    return render(request, 'profile.html', {'form': form})
+
+@login_required
+def edit_user_request(request):
+    user = request.user
+    if request.method == "POST":
+        form = UserUpdateForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect("Avatar")
+    else:
+        form = UserUpdateForm(instance=user)
+
+    contexto = {"form": form}
+    return render(request, "accounts/profile.html", contexto)

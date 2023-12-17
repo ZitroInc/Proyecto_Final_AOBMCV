@@ -12,7 +12,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="ecb68d1c-b861-4be0-b366-c60dcdaf345a">
+    <connection id="507b434c-4036-4677-99fb-25ea36254506">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -29,13 +29,24 @@
     <filter-actions connection-id="ecb68d1c-b861-4be0-b366-c60dcdaf345a" dataset="main.auth_user" active-filter-id="" />
     <filter-actions connection-id="ecb68d1c-b861-4be0-b366-c60dcdaf345a" dataset="main.monchis_log_usuario" active-filter-id="" />
   </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
+  </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="ecb68d1c-b861-4be0-b366-c60dcdaf345a" active="true" signed="true">
+      <connection id="507b434c-4036-4677-99fb-25ea36254506" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -52,7 +63,7 @@
           <tns-folder value="" />
           <tns-profile value="" />
           <files>
-            <file path="C:\Users\Andrés Ortiz\PycharmProjects\Proyecto_Final_AOBMCV\db.sqlite3" schema="main" />
+            <file path="C:\Users\claud\Desktop\Proyecto_Final_AOBMCV-master\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -82,7 +93,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="false" />
+          <connect-automatically value="true" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
